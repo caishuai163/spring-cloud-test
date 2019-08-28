@@ -2,14 +2,14 @@ spring:
   application: 
     name: spring-cloud-eureka
 server: 
-  port: 8000
+  port: 20000
   
 eureka: 
   instance: 
     hostname: peer1
   client: 
     serviceUrl: 
-      defaultZone: http://peer2:8001/eureka/
+      defaultZone: http://peer2:20001/eureka/
 #      register-with-eureka: false
 #      fetch-registry: false
 

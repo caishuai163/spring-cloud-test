@@ -8,11 +8,11 @@
 		<artifactId>springtest</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>testspring-eureka-server</artifactId>
+	<artifactId>testspring-eureka-client</artifactId>
 	<packaging>pom</packaging>
 	<modules>
-		<module>testspring-eureka-s1</module>
-		<module>testspring-eureka-s2</module>
-		<module>testspring-eureka-turbine</module>
+		<module>testspring-eureka-client-a</module>
+		<module>testspring-eureka-client-b</module>
+		<module>testspring-eureka-client-c</module>
 	</modules>
 </project>

@@ -1,0 +1,24 @@
+spring: 
+  application: 
+    name: spring-cloud-client-a
+server: 
+  port: 21001
+  
+eureka: 
+  client: 
+    serviceUrl: 
+      defaultZone: http://peer1:20000/eureka/, http://peer2:20001/eureka/
+#      register-with-eureka: false
+#      fetch-registry: false
+
+feign:
+  hystrix:
+    # 熔断开关
+    enabled: true
+    
+    
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream

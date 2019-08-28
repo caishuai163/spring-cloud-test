@@ -1,6 +1,6 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>test</groupId>
 	<artifactId>springtest</artifactId>
@@ -8,9 +8,7 @@
 	<packaging>pom</packaging>
 	<modules>
 		<module>testspring-eureka-server</module>
-		<module>testspring-eureka-producer</module>
-		<module>testspring-eureka-producer2</module>
-		<module>testspring-eureka-consumer</module>
+		<module>testspring-eureka-client</module>
 	</modules>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -18,7 +16,7 @@
 		<java.version>1.8</java.version>
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<maven.compiler.source>1.8</maven.compiler.source>
-		<spring.cloud.version>Greenwich.RELEASE</spring.cloud.version>
+		<spring.cloud.version>Greenwich.SR2</spring.cloud.version>
 	</properties>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
