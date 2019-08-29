@@ -14,5 +14,6 @@
 		<module>testspring-eureka-s1</module>
 		<module>testspring-eureka-s2</module>
 		<module>testspring-eureka-turbine</module>
+		<module>testspring-git-server</module>
 	</modules>
 </project>

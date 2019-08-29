@@ -1,21 +1,23 @@
-spring: 
-  application: 
-    name: hystrix-dashboard-turbine
-server: 
-  port: 22001
-  
-eureka: 
-  instance: 
-    hostname: peer2
-  client: 
-    serviceUrl: 
-      defaultZone: http://peer1:20000/eureka/,http://peer2:20001/eureka/
-#      register-with-eureka: false
-#      fetch-registry: false
+#spring: 
+#  application: 
+#    name: hystrix-dashboard-turbine
+#server: 
+#  port: 22001
+#  
+#eureka: 
+#  client: 
+#    serviceUrl: 
+#      defaultZone: http://peer1:20000/eureka/,http://peer2:20001/eureka/
+##      register-with-eureka: false
+##      fetch-registry: false
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: refresh
 
-
-turbine: 
-  appConfig: spring-cloud-client-b
-  aggregator: 
-    clusterConfig: default
-  clusterNameExpression: new String("default")
+#turbine: 
+#  appConfig: spring-cloud-client-b
+#  aggregator: 
+#    clusterConfig: default
+#  clusterNameExpression: new String("default")
