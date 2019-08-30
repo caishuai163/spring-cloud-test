@@ -1,0 +1,13 @@
+spring: 
+  application: 
+    name: hystrix-dashboard-turbine
+server: 
+  port: 24001 # the port never changed if the application not restart
+
+# eureka register config 
+eureka: 
+  client: 
+    serviceUrl: 
+      defaultZone: http://peer1:20000/eureka/,http://peer2:20001/eureka/
+#      register-with-eureka: false
+#      fetch-registry: false
