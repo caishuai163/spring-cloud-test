@@ -1,6 +1,6 @@
 spring: 
   application: 
-    name: hystrix-dashboard-turbine
+    name: gateway-service-zuul
 server: 
   port: 24001 # the port never changed if the application not restart
 
@@ -8,6 +8,6 @@ server:
 eureka: 
   client: 
     serviceUrl: 
-      defaultZone: http://peer1:20000/eureka/,http://peer2:20001/eureka/
+      defaultZone: http://peer1:20000/eureka/, http://peer2:20001/eureka/
 #      register-with-eureka: false
 #      fetch-registry: false
