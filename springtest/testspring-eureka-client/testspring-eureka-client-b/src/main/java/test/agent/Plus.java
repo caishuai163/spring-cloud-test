@@ -1,13 +1,15 @@
 package test.agent;
 
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import test.agent.hystrix.PlusHystrix;
 
-@FeignClient(name = "spring-cloud-client-c", fallback = PlusHystrix.class)
+@RefreshScope // 动态刷新
+@FeignClient(name = "${call.client.name.c}", fallback = PlusHystrix.class)
+//@FeignClient(name = "spring-cloud-client-c", fallback = PlusHystrix.class)
 public interface Plus {
-    @RequestMapping(value = "/test")
-    public int hello(@RequestParam("a") int a, @RequestParam("b") int b);
+    @RequestMapping(value = "/test2")
+    public String getConfig();
 }

@@ -5,7 +5,7 @@
 spring: 
   cloud: 
     config: 
-      name: hystrix-dashboard-turbine
+      name: spring-cloud-client-c
       profile: dev
       uri: http://localhost:23001/
       label: master

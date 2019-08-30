@@ -13,7 +13,7 @@ public class TestController {
     private Plus plus;
 
     @RequestMapping("test")
-    public int plus(int a, int b) {
-        return plus.hello(a, b) + b;
+    public String plus(String key) {
+        return "this is a return : " + plus.hello(key);
     }
 }

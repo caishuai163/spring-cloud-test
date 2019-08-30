@@ -1,5 +1,6 @@
 package test.controller;
 
+import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,10 +14,11 @@ public class TestController {
     private Plus plus;
 
     @RequestMapping("test")
-    public int plus(int a, int b) {
-        if (Math.random() > 0.5d) {
+    public String plus(String key) {
+        if (!StringUtils.equals("key", key)) {
+            // 为了测试熔断， 好像返回非200就可以了
             throw new RuntimeException("hehe");
         }
-        return plus.hello(a, b) + b;
+        return "key : " + plus.getConfig();
     }
 }

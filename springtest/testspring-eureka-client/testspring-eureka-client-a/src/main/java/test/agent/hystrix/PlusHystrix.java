@@ -8,8 +8,9 @@ import test.agent.Plus;
 public class PlusHystrix implements Plus {
 
     @Override
-    public int hello(int a, int b) {
-        return -1;
+    public String hello(String a) {
+        return "this is a bug";
     }
+
 
 }

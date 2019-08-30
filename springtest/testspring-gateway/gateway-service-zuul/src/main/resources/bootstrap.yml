@@ -5,7 +5,7 @@
 spring: 
   cloud: 
     config: 
-      name: hystrix-dashboard-turbine
+      name: gateway-service-zuul-application
       profile: dev
       uri: http://localhost:23001/
       label: master

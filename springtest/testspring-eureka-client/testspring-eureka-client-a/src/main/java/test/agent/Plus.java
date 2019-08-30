@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import test.agent.hystrix.PlusHystrix;
 
-@FeignClient(name = "spring-cloud-client-b", fallback = PlusHystrix.class)
+@FeignClient(name = "${call.client.name}", fallback = PlusHystrix.class)
 public interface Plus {
     @RequestMapping(value = "/test")
-    public int hello(@RequestParam("a") int a, @RequestParam("b") int b);
+    public String hello(@RequestParam("key") String a);
 }

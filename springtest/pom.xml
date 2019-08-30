@@ -9,6 +9,8 @@
 	<modules>
 		<module>testspring-eureka-server</module>
 		<module>testspring-eureka-client</module>
+		<module>testspring-gateway</module>
+		<module>testspring-zipkin-server</module>
 	</modules>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
