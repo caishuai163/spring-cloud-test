@@ -7,4 +7,8 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:20000/eureka/,http://localhost:20001/eureka/
-
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream,refresh # 支持获取熔断状态，支持刷新配置
