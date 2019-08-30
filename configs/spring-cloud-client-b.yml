@@ -1,0 +1,28 @@
+spring: 
+  application: 
+    name: spring-cloud-client-b
+server: 
+  port: 21002 
+eureka: 
+  client: 
+    serviceUrl: 
+      defaultZone: http://peer1:20000/eureka/, http://peer2:20001/eureka/
+#      register-with-eureka: false
+#      fetch-registry: false
+feign:
+  hystrix:
+    # 熔断开关
+    enabled: true
+    
+# why add, see http://www.mamicode.com/info-detail-2291907.html or see https://yq.aliyun.com/articles/635815    
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream,refresh # 支持获取熔断状态，支持刷新配置
+ 
+ # 项目内配置
+ call: 
+   client: 
+     name: 
+       c: spring-cloud-client-c
