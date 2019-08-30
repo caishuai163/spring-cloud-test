@@ -22,7 +22,7 @@ management:
         include: hystrix.stream,refresh # 支持获取熔断状态，支持刷新配置
  
  # 项目内配置
- call: 
-   client: 
-     name: 
-       c: spring-cloud-client-c
+call: 
+  client: 
+    name: 
+      c: spring-cloud-client-c
