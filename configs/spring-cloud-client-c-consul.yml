@@ -1,0 +1,37 @@
+spring: 
+  application: 
+    name: spring-cloud-client-c
+#  zipkin:
+#    base-url: http://127.0.0.1:9411
+#  sleuth:
+#    sampler:
+#      probability: 1.0
+  cloud: 
+    consul: 
+      host: 10.12.54.206
+      port: 8500
+      discovery: 
+        serviceName: ${spring.application.name}
+server: 
+  port: 21003
+
+#eureka: 
+#  client: 
+#    serviceUrl: 
+#      defaultZone: http://peer1:20000/eureka/, http://peer2:20001/eureka/
+#      register-with-eureka: false
+#      fetch-registry: false
+
+feign:
+  hystrix:
+    # 熔断开关
+    enabled: true
+    
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
+
+my: 
+  key: 123456
