@@ -1,0 +1,33 @@
+
+# follow can use config center
+spring:
+  application:
+    name: testDemo
+  datasource:
+    url: jdbc:mysql://10.12.54.156:3306/wxminigame_1_db?useUnicode=true&characterEncoding=UTF-8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: dev_dbo_test
+    password: B4DDC0B232D0E997
+    druid:
+      initial-size: 2
+      max-active: 50
+      min-idle: 2
+      max-wait: 60000
+      validation-query: select 1
+      test-on-borrow: false
+      test-on-return: false
+      test-while-idle: true
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 25200000
+  redis:
+    host: 10.12.54.11
+    port: 6380
+    password: Passw0rd
+    database: 10 #db index is test use 10
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+
+
+
